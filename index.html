@@ -1,11 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Focus-timer</title>
-</head>
-<body>
+    <meta name="description" content="Temporizador estilo pomodoro">
+
+    <script src="./src/main.js" type="module" defer></script>
+    <link rel="shortcut icon" href="./assets/favIcon.svg" type="image/x=svg">
     
+    <title>Focus Timer - Pomodoro</title>
+    
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        
+              <button id="toggle-mode">
+
+               <span class="screenReader-only">Ativar/Desativar Light Mode</span> 
+                <i class="ph-duotone ph-sun"></i>
+                <i class="ph-duotone ph-moon"></i>
+
+             </button> 
+
+             <section id="timer" class="flex">
+
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+
+             </section>
+
+             <section id="controls" class="flex">
+
+              <!-- O nome do atributo é apenas data, o action foi uma escolha -->
+
+                <button                 
+                data-action="toggleRunning"
+                class="ph ph-play-circle"> 
+                <span class="screenReader-only">Iniciar contador</span>
+                </button>
+
+                <button 
+                data-action="toggleRunning"
+                class="ph ph-pause-circle">
+                <span class="screenReader-only">Pausar contador</span> 
+                </button>
+
+                <button 
+                data-action="set"
+                class="ph ph-timer secondary" >
+                <span class="screenReader-only">Ajustar contador</span> 
+                </button>
+
+                <button 
+                data-action="reset"
+                class="ph ph-stop-circle secondary" >
+                <span class="screenReader-only">Parar contador</span> 
+                </button>
+
+                <button 
+                data-action="toggleMusic"
+                class="ph ph-speaker-none secondary" >
+                <span class="screenReader-only">Iniciar música</span> 
+                </button>
+
+                <button 
+                data-action="toggleMusic"
+                class="ph ph-speaker-high">
+                <span class="screenReader-only">Parar música</span> 
+                </button>
+
+             </section>
+    </div>
+   
+</div>
+
 </body>
 </html>
